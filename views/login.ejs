@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="css/login.css" />
+<% include ./navbar %>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col justify-content-center my-3">
+      <img src="img/login.png" alt="login" class="login-img" />
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-xs-8 col-md-6 md-xs-4 md-lg-0">
+      <%include ./side/messages%>
+    </div>
+  </div>
+  <div class=" row justify-content-center">
+    <div class="col-xs-8 col-md-6 card">
+      <form action="/login" method="POST">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Enter email"
+            name="email"
+          />
+          <small id="emailHelp" class="form-text text-muted"
+            >We'll never share your email with anyone else.</small
+          >
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            placeholder="Password"
+            name="password"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary px-3 mb-1">
+          Login
+        </button>
+        <a href="/signup">
+          <button type="button" class="btn btn-primary px-3 mb-1 ml-2">
+            New User.?
+          </button>
+        </a>
+        <a href="/google">
+          <button type="button" class="btn btn-primary px-3 mb-1 ml-2">
+            <i class="fab fa-google-plus-g"></i>
+          </button>
+        </a>
+      </form>
+    </div>
+  </div>
+</div>

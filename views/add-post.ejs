@@ -1,0 +1,79 @@
+<%include ./navbar%>
+<link rel="stylesheet" href="css/signup.css" />
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col justify-content-center my-3">
+      <img src="img/post.png" alt="login" class="signup-img thumbnail" />
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-xs-8 col-md-6 md-xs-4 md-lg-0">
+      <%include ./side/messages%>
+    </div>
+  </div>
+  <div class=" row justify-content-center">
+    <div class="col-md-8 col-lg-6 card">
+      <form action="/add-post" method="POST">
+        <div class="form-group">
+          <label for="exampleInputName1">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleInputName1"
+            placeholder="Enter Post title"
+            name="title"
+          />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPost">Content</label>
+
+          <textarea
+            name="content"
+            class="form-control"
+            id="exampleInputPost"
+            placeholder="Enter Post Content"
+            rows="10"
+            onkeydown="breakline(this);"
+            onkeypress="checkcrtl();"
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary px-3 mb-1">
+          Add Post
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  var t = false;
+  var it = false;
+  function breakline(p) {
+    var con = p;
+    key = window.event;
+    if (key.keyCode == 13) {
+      p.value = p.value + "</br>";
+    }
+  }
+
+  function checkcrtl() {
+    key = window.event.keyCode;
+    var con = document.getElementById("exampleInputPost");
+    if (key == 2) {
+      if (!t) {
+        con.value = con.value + "<strong>";
+      } else {
+        con.value = con.value + "</strong>";
+      }
+      t = !t;
+    }
+    if (key == 9) {
+      if (!it) {
+        con.value = con.value + "<i>";
+      } else {
+        con.value = con.value + "</i>";
+      }
+      it = !it;
+    }
+  }
+</script>

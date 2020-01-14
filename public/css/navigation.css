@@ -1,0 +1,23 @@
+.bg-primar {
+  background-color: #5297ff;
+}
+
+.txt-primar {
+  color: white;
+}
+.toggler-icon {
+  width: 30px;
+  height: 3 px;
+  background-color: #5297ff;
+  margin: 6px 0;
+}
+.navbar-brand {
+  color: white;
+}
+.navbar-icon {
+  background: #5297ff;
+  color: #5297ff;
+}
+.navbar-right {
+  margin-right: 90px;
+}

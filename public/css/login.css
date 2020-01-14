@@ -1,0 +1,15 @@
+.form-container {
+  text-align: center;
+  justify-content: center;
+}
+.login-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+@media (max-width: 500px) {
+  .login-img {
+    width: 150px;
+  }
+}
